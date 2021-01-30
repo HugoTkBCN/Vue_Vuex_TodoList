@@ -1,9 +1,3 @@
-<template>
-  <header>
-    <h1>My Todo's ({{ nbrTasks.length }})</h1>
-  </header>
-</template>
-
 <script>
 export default {
   computed: {
@@ -13,6 +7,12 @@ export default {
   },
 };
 </script>
+
+<template>
+  <header>
+    <h1>My Todo's ({{ nbrTasks.length }})</h1>
+  </header>
+</template>
 
 <style>
 </style>
