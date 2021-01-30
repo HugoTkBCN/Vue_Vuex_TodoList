@@ -26,7 +26,6 @@ export default {
 
 <style>
 html {
-  background: linear-gradient(45deg, #c15151 25%, #b89c41);
   height: 100%;
 }
 
@@ -38,8 +37,7 @@ body {
 
 .container {
   width: 30%;
-  margin: auto;
-  background-color: white;
+  margin-bottom: auto;
   border-radius: 15px;
   padding: 1%;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
