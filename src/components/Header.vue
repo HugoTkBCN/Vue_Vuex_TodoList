@@ -8,9 +8,9 @@
 export default {
   computed: {
     nbrTasks() {
-      return this.$store.getters.getTasks;
-    }
-  }
+      return this.$store.getters.getOpenTasks;
+    },
+  },
 };
 </script>
 
