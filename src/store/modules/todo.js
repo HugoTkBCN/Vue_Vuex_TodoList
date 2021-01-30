@@ -3,7 +3,17 @@ export const state = {
 };
 
 export const getters = {
-    getTasks: state => state.todoList
+    getTasks: (state) => {
+        return state.todoList
+    },
+    getOpenTasks: (state) => {
+        var openTasks = [];
+        for (var i in state.todoList) {
+            if (!state.todoList[i].completed)
+                openTasks.push(state.todoList[i]);
+        }
+        return openTasks;
+    }
 };
 
 export const mutations = {
