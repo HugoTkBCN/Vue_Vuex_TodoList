@@ -1,38 +1,38 @@
 export const state = {
-    todo: []
+    todoList: []
 };
 
 export const getters = {
-    getTodo: state => state.todo
+    getTasks: state => state.todoList
 };
 
 export const mutations = {
-    ADD_TODO: (state, payload) => {
-        const newTodo = {
+    ADD_TASK: (state, payload) => {
+        const newTask = {
             id: payload.id,
             description: payload.description,
-            finished: false
+            completed: false
         };
-        state.todo.unshift(newTodo);
+        state.todoList.unshift(newTask);
     },
-    SETSTATE_TODO: (state, payload) => {
-        const item = state.todo.find(todo => todo.id === payload);
-        item.finished = !item.finished;
+    SETSTATE_TASK: (state, payload) => {
+        const item = state.todoList.find(todoList => todoList.id === payload);
+        item.completed = !item.completed;
     },
-    DELETE_TODO: (state, payload) => {
-        const index = state.todo.findIndex(todo => todo.id === payload);
-        state.todo.splice(index, 1);
+    DELETE_TASK: (state, payload) => {
+        const index = state.todoList.findIndex(todoList => todoList.id === payload);
+        state.todoList.splice(index, 1);
     }
 };
 
 export const actions = {
-    addTodo: (context, payload) => {
-        context.commit("ADD_TODO", payload);
+    addTask: (context, payload) => {
+        context.commit("ADD_TASK", payload);
     },
-    setStateTodo: (context, payload) => {
-        context.commit("SETSTATE_TODO", payload);
+    setStateTask: (context, payload) => {
+        context.commit("SETSTATE_TASK", payload);
     },
-    deleteTodo: (context, payload) => {
-        context.commit("DELETE_TODO", payload);
+    deleteTask: (context, payload) => {
+        context.commit("DELETE_TASK", payload);
     }
 };
