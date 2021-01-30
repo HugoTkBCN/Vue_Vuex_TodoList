@@ -1,12 +1,12 @@
 <script>
 import Header from "@/components/Header.vue";
-import TodoNew from "@/components/Todo/TodoNew.vue";
+import TodoInput from "@/components/Todo/TodoInput.vue";
 import TodoList from "@/components/Todo/TodoList.vue";
 
 export default {
   components: {
     Header,
-    TodoNew,
+    TodoInput,
     TodoList,
   },
 };
@@ -18,7 +18,7 @@ export default {
       <div>
         <Header />
         <TodoList />
-        <TodoNew />
+        <TodoInput />
       </div>
     </div>
   </div>
